@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Project Ruleset">
+    <!-- Define the standard to use (e.g., PSR12) -->
+    <rule ref="PSR12">
+        <!-- Exclude specific rules -->
+        <exclude name="Generic.Files.LineLength"/>
+        <exclude name="Generic.WhiteSpace.ScopeIndent"/>
+    </rule>
+
+    <!-- Additional general rules for modern PHP development -->
+    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration"/>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+    <rule ref="Generic.PHP.LowerCaseKeyword"/>
+    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+
+    <!-- Exclude specific directories -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+
+    <!-- Include your source directory -->
+    <file>src</file>
+</ruleset>
